@@ -48,35 +48,6 @@
       margin-bottom: 1.5rem;
     }
 
-    .typing {
-      border-right: 2px solid #555;
-      white-space: nowrap;
-      overflow: hidden;
-      width: 0;
-      animation: typing 6s steps(80, end) forwards, blink 0.75s step-end infinite;
-    }
-
-    @keyframes typing {
-      from {
-        width: 0;
-      }
-
-      to {
-        width: 100%;
-      }
-    }
-
-    @keyframes blink {
-      from,
-      to {
-        border-color: transparent;
-      }
-
-      50% {
-        border-color: #555;
-      }
-    }
-
     p {
       font-size: 1.15rem;
       line-height: 1.8;
@@ -96,16 +67,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 1rem;
       margin-top: 2rem;
-      flex-wrap: nowrap;
-      flex-direction: row;
     }
 
     .carousel img {
       width: 250px;
       aspect-ratio: 1 / 1;
-      object-fit: cover;
+      object-fit: contain;
+      background-color: #f3f3f3;
       border-radius: 15px;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
@@ -113,20 +82,6 @@
 
     .carousel img:hover {
       transform: scale(1.05);
-    }
-
-    .nav {
-      background-color: #fcd34d;
-      border: none;
-      padding: 0.6rem 1rem;
-      font-size: 1.4rem;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .nav:hover {
-      background-color: #fbbf24;
     }
 
     @keyframes fadeIn {
@@ -178,7 +133,6 @@
       ¡Estoy orgulloso de ti y estoy aquí para lo que necesites!
     </p>
 
-    <!-- Carrusel automático -->
     <div class="carousel">
       <img id="carrusel-img" src="foto1.jpeg" alt="Fotos de Sharen y William" />
     </div>
@@ -195,7 +149,6 @@
       document.getElementById("carrusel-img").src = fotos[actual];
     }
 
-    // Carrusel automático cada 4 segundos
     setInterval(() => {
       mover(1);
     }, 4000);
