@@ -104,7 +104,7 @@
 
     .carousel img {
       width: 250px;
-      height: 250px;
+      aspect-ratio: 1 / 1;
       object-fit: cover;
       border-radius: 15px;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
@@ -156,7 +156,6 @@
 
       .carousel img {
         width: 200px;
-        height: 200px;
       }
     }
   </style>
@@ -167,7 +166,7 @@
     <h1>¡Carta Para Que Mi Prima No Pierda El ICFES!</h1>
     <div>Querida Sharen,</div>
 
-    <p class="typing">
+    <p>
       Sé que estás a punto de presentar las pruebas ICFES, quería desearte muchos éxitos y decirte que creo en ti.
       Este es un paso más en tu camino, y confío en que saldrás adelante con tu esfuerzo,
       tu disciplina y sobre todo con la ayuda de Dios.
@@ -179,11 +178,9 @@
       ¡Estoy orgulloso de ti y estoy aquí para lo que necesites!
     </p>
 
-    <!-- Carrusel de fotos corregido con extensión .jpeg -->
+    <!-- Carrusel automático -->
     <div class="carousel">
-      <button class="nav prev" onclick="mover(-1)">⟵</button>
       <img id="carrusel-img" src="foto1.jpeg" alt="Fotos de Sharen y William" />
-      <button class="nav next" onclick="mover(1)">⟶</button>
     </div>
 
     <footer>De su primo cansón,<br>William, el mejor programador 🧡</footer>
@@ -197,6 +194,11 @@
       actual = (actual + direccion + fotos.length) % fotos.length;
       document.getElementById("carrusel-img").src = fotos[actual];
     }
+
+    // Carrusel automático cada 4 segundos
+    setInterval(() => {
+      mover(1);
+    }, 4000);
   </script>
 </body>
 
