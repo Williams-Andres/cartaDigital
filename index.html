@@ -4,25 +4,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carta para mi Prima</title>
-  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Open+Sans&display=swap" rel="stylesheet">
+  <title>Carta para Sharen</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Open+Sans&family=Pacifico&display=swap"
+    rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 2rem;
-      background: linear-gradient(to bottom right, #fffbea, #fceabb);
       font-family: 'Open Sans', sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #fffbea, #fceabb);
+      animation: bgAnimation 10s infinite alternate;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
+    }
+
+    @keyframes bgAnimation {
+      0% {
+        background: linear-gradient(135deg, #fffbea, #fceabb);
+      }
+
+      100% {
+        background: linear-gradient(135deg, #ffe9f3, #d7f9f1);
+      }
     }
 
     .letter {
       background: #fffdf8;
       padding: 2.5rem;
       border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
       max-width: 750px;
       width: 100%;
       animation: fadeIn 1.5s ease;
@@ -32,13 +44,42 @@
       font-family: 'Kaushan Script', cursive;
       text-align: center;
       color: #d97706;
-      font-size: 2.2rem;
+      font-size: 2.3rem;
       margin-bottom: 1.5rem;
+    }
+
+    .typing {
+      border-right: 2px solid #555;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 6s steps(80, end) forwards, blink 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes blink {
+      from,
+      to {
+        border-color: transparent;
+      }
+
+      50% {
+        border-color: #555;
+      }
     }
 
     p {
       font-size: 1.15rem;
-      line-height: 1.9;
+      line-height: 1.8;
       color: #444;
       margin: 1rem 0;
     }
@@ -46,8 +87,71 @@
     footer {
       margin-top: 2.5rem;
       text-align: right;
+      font-family: 'Pacifico', cursive;
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    button {
+      display: block;
+      margin: 2rem auto 0;
+      padding: 0.6rem 1.4rem;
+      font-size: 1rem;
+      background-color: #fcd34d;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #fbbf24;
+    }
+
+    .hidden {
+      display: none;
+      margin-top: 1.5rem;
+      text-align: center;
       font-style: italic;
       color: #555;
+      font-size: 1.05rem;
+    }
+
+    .carousel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+      flex-wrap: nowrap;
+      flex-direction: row;
+    }
+
+    .carousel img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .carousel img:hover {
+      transform: scale(1.05);
+    }
+
+    .nav {
+      background-color: #fcd34d;
+      border: none;
+      padding: 0.6rem 1rem;
+      font-size: 1.4rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav:hover {
+      background-color: #fbbf24;
     }
 
     @keyframes fadeIn {
@@ -70,6 +174,15 @@
       .letter {
         padding: 1.5rem;
       }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .carousel img {
+        width: 200px;
+        height: 200px;
+      }
     }
   </style>
 </head>
@@ -77,23 +190,50 @@
 <body>
   <div class="letter">
     <h1>🌟 ¡Carta Para Que Mi Prima No Pierda El ICFES! 🌟</h1>
+    <div class="typing">Querida Sharen,</div>
+
     <p>
-      Querida Sharen,
-    </p>
-    <p>
-      Sé que estás a punto de presentar las pruebas ICFES, quería desearte muchos exitos y decirte que creo en ti. Este es un paso más en tu camino, y confío en que saldrás adelante con tu esfuerzo, 
+      Sé que estás a punto de presentar las pruebas ICFES, quería desearte muchos éxitos y decirte que creo en ti.
+      Este es un paso más en tu camino, y confío en que saldrás adelante con tu esfuerzo,
       tu disciplina y sobre todo con la ayuda de Dios.
     </p>
     <p>
-      No olvides que los exámenes no definen tu valor, pero sí pueden abrir muchas puertas si los enfrentas con buena actitud. ¡Así que, echele ganas!
+      No olvides que los exámenes no definen tu valor, pero sí pueden abrir muchas puertas si los enfrentas con buena actitud. ¡Así que, échale ganas!
     </p>
     <p>
       ¡Estoy orgulloso de ti y estoy aquí para lo que necesites!
     </p>
-    <footer>De su primo cansón,<br>William el mejor programador🧡</footer>
+
+    <!-- Carrusel de fotos -->
+    <div class="carousel">
+      <button class="nav prev" onclick="mover(-1)">⟵</button>
+      <img id="carrusel-img" src="foto1.jpg" alt="Fotos de Sharen y William" />
+      <button class="nav next" onclick="mover(1)">⟶</button>
+    </div>
+
+    <!-- Frase sorpresa -->
+    <button onclick="mostrarFrase()">Ver frase sorpresa ✨</button>
+    <div class="hidden" id="frase">
+      "Los límites solo existen si tú los permites. ¡Atrévete a llegar más lejos!"
+    </div>
+
+    <footer>De su primo cansón,<br>William, el mejor programador 🧡</footer>
   </div>
+
+  <script>
+    const fotos = ["foto1.jpg", "foto2.jpg", "foto3.jpg", "foto4.jpg", "foto5.jpg"];
+    let actual = 0;
+
+    function mover(direccion) {
+      actual = (actual + direccion + fotos.length) % fotos.length;
+      document.getElementById("carrusel-img").src = fotos[actual];
+    }
+
+    function mostrarFrase() {
+      const frase = document.getElementById("frase");
+      frase.classList.toggle("hidden");
+    }
+  </script>
 </body>
 
 </html>
-
-
