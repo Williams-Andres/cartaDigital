@@ -1,66 +1,96 @@
-<!-- cartaDigital.html -->
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para mi prima</title>
-    <style>
-        body {
-            background: #fdf6e3;
-            font-family: 'Georgia', serif;
-            padding: 2rem;
-            color: #333;
-            max-width: 700px;
-            margin: auto;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para mi prima</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 2rem;
+      background: linear-gradient(to bottom right, #fffbea, #fceabb);
+      font-family: 'Open Sans', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
 
-        h1 {
-            text-align: center;
-            color: #b58900;
-        }
+    .letter {
+      background: #fffdf8;
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      max-width: 750px;
+      width: 100%;
+      animation: fadeIn 1.5s ease;
+    }
 
-        .letter {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        }
+    h1 {
+      font-family: 'Kaushan Script', cursive;
+      text-align: center;
+      color: #d97706;
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+    }
 
-        p {
-            line-height: 1.8;
-            font-size: 1.1rem;
-        }
+    p {
+      font-size: 1.15rem;
+      line-height: 1.9;
+      color: #444;
+      margin: 1rem 0;
+    }
 
-        footer {
-            margin-top: 2rem;
-            text-align: right;
-            font-style: italic;
-        }
-    </style>
+    footer {
+      margin-top: 2.5rem;
+      text-align: right;
+      font-style: italic;
+      color: #555;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media screen and (max-width: 500px) {
+      body {
+        padding: 1rem;
+      }
+
+      .letter {
+        padding: 1.5rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div class="letter">
-        <h1>🌟 ¡Tú puedes, prima! 🌟</h1>
-        <p>
-            Querida [nombre de tu prima],
-        </p>
-        <p>
-            Sé que estás a punto de presentar las pruebas ICFES, y quería decirte cuánto creo en ti. Este es un paso más
-            en tu camino, y confío en que saldrás adelante con tu esfuerzo, tu disciplina y tu fe.
-        </p>
-        <p>
-            No olvides que los exámenes no definen tu valor, pero sí pueden abrir muchas puertas si los enfrentas con
-            buena actitud. ¡Tienes todo lo necesario para brillar!
-        </p>
-        <p>
-            ¡Estoy orgulloso de ti y estoy aquí para lo que necesites!
-        </p>
-        <footer>Con cariño,
-            William 🧡</footer>
-    </div>
+  <div class="letter">
+    <h1>🌟 ¡Tú puedes, prima! 🌟</h1>
+    <p>
+      Querida [nombre de tu prima],
+    </p>
+    <p>
+      Sé que estás a punto de presentar las pruebas ICFES, y quería decirte cuánto creo en ti. Este es un paso más en tu camino, y confío en que saldrás adelante con tu esfuerzo, tu disciplina y tu fe.
+    </p>
+    <p>
+      No olvides que los exámenes no definen tu valor, pero sí pueden abrir muchas puertas si los enfrentas con buena actitud. ¡Tienes todo lo necesario para brillar!
+    </p>
+    <p>
+      ¡Estoy orgulloso de ti y estoy aquí para lo que necesites!
+    </p>
+    <footer>Con cariño,<br>William 🧡</footer>
+  </div>
 </body>
 
 </html>
