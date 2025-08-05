@@ -92,31 +92,6 @@
       color: #555;
     }
 
-    button {
-      display: block;
-      margin: 2rem auto 0;
-      padding: 0.6rem 1.4rem;
-      font-size: 1rem;
-      background-color: #fcd34d;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #fbbf24;
-    }
-
-    .hidden {
-      display: none;
-      margin-top: 1.5rem;
-      text-align: center;
-      font-style: italic;
-      color: #555;
-      font-size: 1.05rem;
-    }
-
     .carousel {
       display: flex;
       align-items: center;
@@ -189,10 +164,10 @@
 
 <body>
   <div class="letter">
-    <h1>🌟 ¡Carta Para Que Mi Prima No Pierda El ICFES! 🌟</h1>
-    <div class="typing">Querida Sharen,</div>
+    <h1>¡Carta Para Que Mi Prima No Pierda El ICFES!</h1>
+    <div>Querida Sharen,</div>
 
-    <p>
+    <p class="typing">
       Sé que estás a punto de presentar las pruebas ICFES, quería desearte muchos éxitos y decirte que creo en ti.
       Este es un paso más en tu camino, y confío en que saldrás adelante con tu esfuerzo,
       tu disciplina y sobre todo con la ayuda de Dios.
@@ -204,17 +179,11 @@
       ¡Estoy orgulloso de ti y estoy aquí para lo que necesites!
     </p>
 
-    <!-- Carrusel de fotos -->
+    <!-- Carrusel de fotos corregido con extensión .jpeg -->
     <div class="carousel">
       <button class="nav prev" onclick="mover(-1)">⟵</button>
-      <img id="carrusel-img" src="foto1.jpg" alt="Fotos de Sharen y William" />
+      <img id="carrusel-img" src="foto1.jpeg" alt="Fotos de Sharen y William" />
       <button class="nav next" onclick="mover(1)">⟶</button>
-    </div>
-
-    <!-- Frase sorpresa -->
-    <button onclick="mostrarFrase()">Ver frase sorpresa ✨</button>
-    <div class="hidden" id="frase">
-      "Los límites solo existen si tú los permites. ¡Atrévete a llegar más lejos!"
     </div>
 
     <footer>De su primo cansón,<br>William, el mejor programador 🧡</footer>
@@ -228,13 +197,7 @@
       actual = (actual + direccion + fotos.length) % fotos.length;
       document.getElementById("carrusel-img").src = fotos[actual];
     }
-
-    function mostrarFrase() {
-      const frase = document.getElementById("frase");
-      frase.classList.toggle("hidden");
-    }
   </script>
 </body>
 
 </html>
-
